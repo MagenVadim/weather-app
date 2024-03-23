@@ -21,7 +21,7 @@ export const Header = (props: Props) => {
       border: 'none',
       borderRadius: '10px',
       zIndex:100,
-      'margin-left': '10px',
+      'margin-left': '20px',
     })
   }
 
