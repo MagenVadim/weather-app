@@ -1,5 +1,6 @@
 import React from 'react'
 import s from "./ThisDay.module.scss"
+import { GlobalSwgSelector } from '../../../../assets/icons/global/GlobalSwgSelector'
 
 interface Props {}
 
@@ -7,9 +8,14 @@ export const ThisDay = (props: Props) => {
   return (
     <div className={s.this__day}>
           <div className={s.top__block}>
-            <div className={s.this__temp}>20°</div>
-            <div className={s.this__day_day}>Today</div>
+            <div className={s.top__block__wrapper}>
+              <div className={s.this__temp}>20°</div>
+              <div className={s.this__day_name}>Today</div>
+            </div>
+            <GlobalSwgSelector id={"sun"}/>
+
           </div>
+
 
           <div className={s.bottom__block}>
             <div className={s.this__time}>Time: <span>21:54</span></div>
