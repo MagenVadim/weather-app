@@ -1,7 +1,6 @@
 @import "../../../../styles/variables.scss";
 
 .this__day{
-    margin-top: 20px;
     padding: 20px;
     max-width: 400px;
     width: 100%;
@@ -31,6 +30,7 @@
     gap: 14px;
     display: flex;
     flex-direction: column;
+    font-size: 25px;
 }
 .this__temp{
     font-size: 96px;
