@@ -1,4 +1,3 @@
-import React from 'react'
 import Select from 'react-select'
 import s from "./Header.module.scss"
 import { GlobalSwgSelector } from '../../assets/icons/global/GlobalSwgSelector'
