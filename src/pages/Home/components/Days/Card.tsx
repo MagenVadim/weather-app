@@ -13,7 +13,7 @@ export const Card = ({itemDay}: Props) => {
   return (
     <div className={s.card}>
       <div className={s.day}>{day}</div>
-      <div className={s.day__info}>{day_info}</div>
+      <div className={s.day_info}>{day_info}</div>
       <div className={s.img}>
         <GlobalSwgSelector id={icon_id}/>
       </div>
