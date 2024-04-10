@@ -1,6 +1,7 @@
 import s from './Home.module.scss'
 import {ThisDay} from './ThisDay/ThisDay'
 import {ThisDayInfo} from './ThisDayInfo//ThisDayInfo'
+import {Days} from './Days/Days'
 
 interface Props {}
 
@@ -11,7 +12,7 @@ export const Home = (props: Props) => {
         <ThisDay/>
         <ThisDayInfo/>
       </div>
-
+      <Days/>
     </div>
   )
 }
