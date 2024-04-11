@@ -4,12 +4,15 @@ import { Home } from './pages/Home/components/Home';
 import { MonthStatistics } from './pages/MonthStatistics/components/MonthStatistics';
 
 import { Header } from './shared/Header/Header';
+import { Popup } from './shared/Popup/Popup';
 
 
 function App() {
   return (
     <div className="App">
       <div className="container">
+        
+        <Popup/>
         <Header/>
 
         <Routes>
