@@ -13,10 +13,10 @@ export const Tabs = (props: Props) => {
       value: "for week"
     },
     {
-      value: "for 10 days"
+      value: "for month"
     },
     {
-      value: "for month"
+      value: "for 10 days"
     },
   ]
 
@@ -30,7 +30,7 @@ export const Tabs = (props: Props) => {
         ))          
       }
       </div>
-      <div className={s.cancel}>"Cancel"</div>
+      <div className={s.cancel}>Cancel</div>
     </div>
   )
 }
