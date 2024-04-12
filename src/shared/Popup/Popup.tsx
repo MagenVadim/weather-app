@@ -29,6 +29,9 @@ export const Popup = ({}: Props) => {
         },
       ];
   return (
+  <>
+    <div className={s.blur}></div>
+    
     <div className={s.popup}>
         <div className={s.this__day__info__items}>
             {items.map((item: Item)=>(
@@ -36,6 +39,8 @@ export const Popup = ({}: Props) => {
             ))}
         </div>
     </div>
+  </>
+    
   )
 }
 

@@ -10,17 +10,16 @@ import { Popup } from './shared/Popup/Popup';
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        
+      <div className="global-container">
         <Popup/>
-        <Header/>
-
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/month-statistics' element={<MonthStatistics/>}/>
-        </Routes>
+        <div className="container">   
+          <Header/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/month-statistics' element={<MonthStatistics/>}/>
+          </Routes>
+        </div>        
       </div>
-
     </div>
   );
 }
