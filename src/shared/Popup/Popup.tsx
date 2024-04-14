@@ -7,26 +7,26 @@ interface Props {};
 
 export const Popup = ({}: Props) => {
     const items = [
-        {
-          icon_id: 'temp',
-          name: 'Температура',
-          value: '20° - ощущается как 17°',
-        },
-        {
-          icon_id: 'pressure',
-          name: 'Давление',
-          value: '765 мм ртутного столба - нормальное',
-        },
-        {
-          icon_id: 'precipitation',
-          name: 'Осадки',
-          value: 'Без осадков',
-        },
-        {
-          icon_id: 'wind',
-          name: 'Ветер',
-          value: '3 м/с юго-запад - легкий ветер',
-        },
+      {
+        icon_id:'temp',
+        name:'temperature',
+        value:'20°- feels like 17°',
+      },
+      {
+        icon_id:'pressure',
+        name:'pressure',
+        value:'765 mm Hg - normal',
+      },
+      {
+        icon_id:'precipitation',
+        name:'precipitation',
+        value:'no precipitation',
+      },
+      {
+        icon_id:'wind',
+        name:'wind',
+        value:'3 m/s southwest - light wind',
+      },
       ];
   return (
   <>
@@ -37,6 +37,10 @@ export const Popup = ({}: Props) => {
             {items.map((item: Item)=>(
                 <ThisDayItem key={item.icon_id} item={item} />
             ))}
+        </div>
+
+        <div className={s.close}>
+            <GlobalSwgSelector id="close"/>
         </div>
     </div>
   </>
