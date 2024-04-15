@@ -8,7 +8,7 @@
     display: flex;    
     justify-content: space-between;
     flex-direction: column;
-    background: $lite-background;
+    background: var(--components-background-default);
     box-shadow: $box-shadow;
     border-radius: $border-radius;
 }
@@ -40,5 +40,5 @@
 .this__day_name{
     font-size: 40px;
     font-weight: 400;
-    color: $lite-color;
+    color: $light-color;
 }

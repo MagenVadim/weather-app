@@ -33,6 +33,16 @@ export const Popup = ({}: Props) => {
     <div className={s.blur}></div>
     
     <div className={s.popup}>
+      <div className={s.day}>
+        <div className={s.day_temp}>12°</div>
+        <div className={s.day_name}>Wednesday</div>
+        <div className={s.img}>
+          <GlobalSwgSelector id="sun"/>
+        </div>
+        <div className={s.day_time}>Time: <span>21:54</span></div>
+        <div className={s.day_city}>City: <span>Tel-Aviv</span></div>
+      </div>
+
         <div className={s.this__day__info__items}>
             {items.map((item: Item)=>(
                 <ThisDayItem key={item.icon_id} item={item} />
