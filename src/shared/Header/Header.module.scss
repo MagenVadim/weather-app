@@ -11,13 +11,18 @@ header{
     display: flex;
     align-items: center;
 }
-.logo{
+
+.change_theme, .logo{
     margin-right: 20px;
+    cursor: pointer;
+}
+.logo{
     svg{
         width: 65px;
         height: 65px;
     }
 }
+
 .title{
     text-transform: uppercase;
     font-weight: bold;

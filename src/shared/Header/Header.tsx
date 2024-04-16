@@ -1,6 +1,7 @@
 import Select from 'react-select'
 import s from "./Header.module.scss"
 import { GlobalSwgSelector } from '../../assets/icons/global/GlobalSwgSelector'
+import { useState } from 'react'
 
 interface Props {}
 
@@ -14,16 +15,29 @@ export const Header = (props: Props) => {
   const colourStyles = {
     control: (styles: any)=>({
       ...styles,
-      backgroundColor: 'rgba(71, 147, 255, 0.2)',
+      backgroundColor: 0 ? '#4f4f4f' : 'rgba(71, 147, 255, 0.2)',
       width: '194px',
       height: '37px',
       border: 'none',
       borderRadius: '10px',
       zIndex:100,
       'margin-left': '20px',
+    }),
+    singleValue: (styles: any)=>({
+      ...styles,
+      color: 0 ? '#fff' : '#000',
     })
   }
 
+
+  const [theme, setTheme] = useState('light')
+
+  function changeTheme(){
+    setTheme(theme==='light' ? 'dark' : 'light');
+
+    const root = document.querySelector(":root") as HTMLElement;  
+    root.style.setProperty('--body-background-default',`var(--body-background-${theme})`)
+  }
 
   return (
     <header className={s.header}>
@@ -35,7 +49,10 @@ export const Header = (props: Props) => {
         </div>
 
         <div className={s.wrapper}>
-          <GlobalSwgSelector id={"change-theme"}/>
+          <div className={s.change_theme} onClick={changeTheme}>
+            <GlobalSwgSelector id={"change-theme"}/>
+          </div>
+          
           <Select defaultValue={options[0]} styles={colourStyles} options={options} />
         </div>
     </header>
