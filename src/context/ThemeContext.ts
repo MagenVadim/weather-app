@@ -5,4 +5,7 @@ interface Props{
     changeTheme: (theme: string) => void;
 }
 
-export const ThemeContext = createContext({})
+export const ThemeContext = createContext<Props>({
+    theme:'',
+    changeTheme: ()=>{}
+})

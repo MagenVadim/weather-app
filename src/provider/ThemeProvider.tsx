@@ -14,9 +14,8 @@ export const ThemeProvider = ({children, ...props}: Props) =>{
         setTheme(theme)
     }
 
-    return <ThemeContext.Provider value={{
-        theme,
-        changeTheme,
-    }}>{children}</ThemeContext.Provider>
+    return <ThemeContext.Provider value={{theme,changeTheme,}} {...props}>
+        {children}
+        </ThemeContext.Provider>
 
 }
