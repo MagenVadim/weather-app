@@ -1,7 +1,8 @@
 import {Theme} from "../context/ThemeContext"
 
 export function changeCssRootVariables (theme: Theme){
-
+    console.log(theme);
+    
     const root = document.querySelector(":root") as HTMLElement;
 
     const components=[
