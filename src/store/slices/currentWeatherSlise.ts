@@ -1,15 +1,13 @@
+import { createSlice } from "@reduxjs/toolkit";
 
 type CurrentWeather = {
     weather: any;
     isLoading: boolean;
-    repsponse: Response;
+    response: {
+        status: number,
+        message: string
+    };
 }
-
-type  Response = {
-    status: number,
-    message: string
-}
-
 
 const initialState = {
     weather:{},
@@ -19,3 +17,18 @@ const initialState = {
         message: ''
     },
 };
+
+export const currentWeatherSlise = createSlice(
+    {
+        name:'current_weather',
+        initialState,
+        reducers:{
+            fetchCurrentWeather(state){
+                state.isLoading = true;
+            },
+            fetchCurrentWeatherSuccess(state, action: any){
+                state.weather = action;
+            }
+        }
+    }
+)
