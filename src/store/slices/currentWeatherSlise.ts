@@ -31,7 +31,19 @@ export const currentWeatherSlise = createSlice(
             fetchCurrentWeatherSuccess(state, action: PayloadAction<AxiosResponse<Weather>>){
                 state.weather = action.payload.data;
                 state.isLoading = false;
+                state.repsponse = {
+                    status: action.payload.status,
+                    message: action.payload.statusText,
+                }
+            },
+            fetchCurrentWeatherError(state, action: PayloadAction<AxiosResponse<Weather>>){
+                state.isLoading = false;
+                state.repsponse = {
+                    status: action.payload.status,
+                    message: action.payload.statusText,
+                }
             }
+
         }
     }
 )
