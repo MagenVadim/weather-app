@@ -29,7 +29,8 @@ export const currentWeatherSlise = createSlice(
                 state.isLoading = true;
             },
             fetchCurrentWeatherSuccess(state, action: PayloadAction<AxiosResponse<Weather>>){
-                state.weather = action;
+                state.weather = action.payload.data;
+                state.isLoading = false;
             }
         }
     }
