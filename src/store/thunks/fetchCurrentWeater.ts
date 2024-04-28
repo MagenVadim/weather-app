@@ -4,6 +4,11 @@ import { AppDispatch } from "../store";
 
 export const fetchCurrentWeater = 
     (payload: string) => async (dispatch:AppDispatch) => {
-        dispatch(currentWeatherSlise.actions.fetchCurrentWeather())
-        const res = await WeatherService.getCurrentWeather(payload)
+        dispatch(currentWeatherSlise.actions.fetchCurrentWeather());
+        const res = await WeatherService.getCurrentWeather(payload);
+        if(res.status===200){
+            dispatch(currentWeatherSlise.actions.fetchCurrentWeatherSuccess(res));
+        } else {
+            dispatch(currentWeatherSlise.actions.fetchCurrentWeatherError(res));
+        }
 }
