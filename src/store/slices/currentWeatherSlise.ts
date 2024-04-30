@@ -47,3 +47,5 @@ export const currentWeatherSlise = createSlice(
         }
     }
 )
+
+export default currentWeatherSlise.reducer;
