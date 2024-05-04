@@ -12,7 +12,7 @@ export const Home = (props: Props) => {
   const dispatch = useCustomDispatch();
 
   useEffect(()=>{
-    
+    dispatch(fetchCurrentWeater('paris'))
   },[])
 
   return (
