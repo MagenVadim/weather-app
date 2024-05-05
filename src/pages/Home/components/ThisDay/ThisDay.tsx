@@ -1,10 +1,13 @@
 import React from 'react'
 import s from "./ThisDay.module.scss"
 import { GlobalSwgSelector } from '../../../../assets/icons/global/GlobalSwgSelector'
+import { Weather } from '../../../../store/types/types'
 
-interface Props {}
+interface Props {
+  weather: Weather
+}
 
-export const ThisDay = (props: Props) => {
+export const ThisDay = ({weather}: Props) => {
   return (
     <div className={s.this__day}>
           <div className={s.top__block}>
