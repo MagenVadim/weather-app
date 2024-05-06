@@ -11,10 +11,15 @@ type CurrentWeather = {
     };
 }
 
-const initialState = {
-    weather:{},
+const initialState:CurrentWeather = {
+    weather:{
+        main:{
+            temp: 0
+        }
+        
+    },
     isLoading: false,
-    repsponse:{
+    response:{
         status: 0,
         message: ''
     },
@@ -31,14 +36,14 @@ export const currentWeatherSlise = createSlice(
             fetchCurrentWeatherSuccess(state, action: PayloadAction<AxiosResponse<Weather>>){
                 state.weather = action.payload.data;
                 state.isLoading = false;
-                state.repsponse = {
+                state.response = {
                     status: action.payload.status,
                     message: action.payload.statusText,
                 }
             },
             fetchCurrentWeatherError(state, action: PayloadAction<AxiosResponse<Weather>>){
                 state.isLoading = false;
-                state.repsponse = {
+                state.response = {
                     status: action.payload.status,
                     message: action.payload.statusText,
                 }

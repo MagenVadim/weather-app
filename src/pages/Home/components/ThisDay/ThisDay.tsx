@@ -4,7 +4,7 @@ import { GlobalSwgSelector } from '../../../../assets/icons/global/GlobalSwgSele
 import { Weather } from '../../../../store/types/types'
 
 interface Props {
-  weather: Weather
+  weather: Weather;
 }
 
 export const ThisDay = ({weather}: Props) => {
@@ -12,7 +12,7 @@ export const ThisDay = ({weather}: Props) => {
     <div className={s.this__day}>
           <div className={s.top__block}>
             <div className={s.top__block__wrapper}>
-              <div className={s.this__temp}>20°</div>
+              <div className={s.this__temp}>{weather.main.temp}</div>
               <div className={s.this__day_name}>Today</div>
             </div>
             <GlobalSwgSelector id={"sun"}/>
