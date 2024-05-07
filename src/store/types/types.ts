@@ -1,5 +1,5 @@
 export type Weather={
     main:{
-        temp:number;
+        temp: number;
     }
 }

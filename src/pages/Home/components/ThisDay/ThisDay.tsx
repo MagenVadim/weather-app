@@ -12,7 +12,7 @@ export const ThisDay = ({weather}: Props) => {
     <div className={s.this__day}>
           <div className={s.top__block}>
             <div className={s.top__block__wrapper}>
-              <div className={s.this__temp}>{weather.main.temp}</div>
+              <div className={s.this__temp}>{Math.floor(weather.main.temp)}°</div>
               <div className={s.this__day_name}>Today</div>
             </div>
             <GlobalSwgSelector id={"sun"}/>
