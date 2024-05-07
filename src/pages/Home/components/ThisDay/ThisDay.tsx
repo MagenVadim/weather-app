@@ -22,7 +22,7 @@ export const ThisDay = ({weather}: Props) => {
 
           <div className={s.bottom__block}>
             <div className={s.this__time}>Time: <span>21:54</span></div>
-            <div className={s.this__city}>City: <span>Tel-Aviv</span></div>
+            <div className={s.this__city}>City: <span>{weather.name}</span></div>
           </div>
     </div>
   )
